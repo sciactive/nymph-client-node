@@ -1,0 +1,28 @@
+{
+  "name": "nymph-client-node",
+  "version": "0.0.1-alpha1",
+  "description": "A client wrapper for using Nymph in Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sciactive/nymph-client-node.git"
+  },
+  "keywords": [
+    "nymph"
+  ],
+  "author": "Hunter Perrin <hperrin@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sciactive/nymph-client-node/issues"
+  },
+  "homepage": "https://github.com/sciactive/nymph-client-node#readme",
+  "dependencies": {
+    "module-alias": "^2.0.1",
+    "nymph-client": "^1.6.1",
+    "websocket": "^1.0.24",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
