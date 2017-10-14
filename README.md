@@ -12,7 +12,7 @@ It also sets up Nymph.init to also call PubSub.init with your configs, so you do
 
 To install, use npm:
 
-```js
+```
 npm install --save nymph-client-node
 ```
 
