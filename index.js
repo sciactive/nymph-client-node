@@ -20,7 +20,9 @@ const PubSub = require('NymphPubSub').PubSub;
 const _init = Nymph.init;
 Nymph.init = (nymphOptions) => {
   _init.call(Nymph, nymphOptions);
-  PubSub.init(nymphOptions);
+  if (nymphOptions.pubsubURL) {
+    PubSub.init(nymphOptions);
+  }
 };
 
 module.exports = Nymph;
