@@ -1,3 +1,8 @@
+// Nymph Node Client
+
+// (really, it's just the browser client with some Node libraries to supply fake
+// browser globals.)
+
 // Do aliases to get around Node modules.
 const nymphPath = require.resolve('nymph-client').replace(/lib\/Nymph(?:\.js)?$/, '');
 const alias = require('module-alias');
