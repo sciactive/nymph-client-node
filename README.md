@@ -23,7 +23,7 @@ It also sets up Nymph.init to also call PubSub.init with your configs, so you do
 <div dir="rtl">Quick Setup with NPM</div>
 
 ```sh
-npm install --save nymph-client
+npm install --save nymph-client-node
 ```
 
 To use, require it as the Nymph object:
