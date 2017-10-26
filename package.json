@@ -1,6 +1,6 @@
 {
   "name": "nymph-client-node",
-  "version": "0.0.1-alpha3",
+  "version": "0.0.1-alpha4",
   "description": "A client wrapper for using Nymph in Node.js.",
   "main": "index.js",
   "scripts": {

@@ -4,7 +4,7 @@
 // browser globals.)
 
 // Do aliases to get around Node modules.
-const nymphPath = require.resolve('nymph-client').replace(/lib\/Nymph(?:\.js)?$/, '');
+const nymphPath = require.resolve('nymph-client').replace(/lib-cjs\/Nymph(?:\.js)?$/, '');
 const alias = require('module-alias');
 alias.addAliases({
   'Nymph': nymphPath + 'lib-cjs/Nymph',
