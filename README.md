@@ -29,7 +29,15 @@ npm install --save nymph-client-node
 To use, require it as the Nymph object:
 
 ```js
-const Nymph = require('nymph-client-node');
+const Nymph = require('nymph-client-node').Nymph;
+```
+
+Or, if you need cookie support (like if you're using Tilmeld):
+
+```js
+const NymphNode = require('nymph-client-node');
+NymphNode.enableCookies();
+const Nymph = NymphNode.Nymph;
 ```
 
 Then provide the options to Nymph.init:
