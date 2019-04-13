@@ -45,8 +45,7 @@ Then provide the options to Nymph.init:
 ```js
 Nymph.init({
   restURL: 'https://yournymphrestserver/path/to/your/rest.php',
-  pubsubURL: 'wss://yournymphpubsubserver:8080',
-  rateLimit: 100
+  pubsubURL: 'wss://yournymphpubsubserver:8080'
 });
 ```
 
