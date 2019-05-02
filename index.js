@@ -12,8 +12,8 @@ const enableCookies = () => {
   global.XMLHttpRequest = xhrc.XMLHttpRequest;
 };
 
-const nymphClient = require('nymph-client');
-const {Nymph, PubSub} = nymphClient;
+const NymphClient = require('nymph-client');
+const {Nymph, PubSub} = NymphClient;
 
 // Make a shortcut for PubSub init.
 const _init = Nymph.init;
@@ -24,4 +24,4 @@ Nymph.init = (nymphOptions) => {
   }
 };
 
-module.exports = {Nymph, PubSub, enableCookies, ...nymphClient};
+module.exports = {Nymph, PubSub, enableCookies, ...NymphClient};
