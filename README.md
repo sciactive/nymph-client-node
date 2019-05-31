@@ -2,11 +2,9 @@
 
 [![Latest Stable Version](https://img.shields.io/npm/v/nymph-client-node.svg)](https://www.npmjs.com/package/nymph-client-node) [![Open Issues](https://img.shields.io/github/issues/sciactive/nymph-client-node.svg)](https://github.com/sciactive/nymph-client-node/issues) [![License](https://img.shields.io/github/license/sciactive/nymph-client-node.svg)]()
 
-Nymph is an object data store that is easy to use in JavaScript and PHP.
+Nymph is an object data store for JavaScript and PHP.
 
 ## Installation
-
-You can install Nymph Node Client with NPM.
 
 ```sh
 npm install --save nymph-client-node
@@ -18,26 +16,20 @@ The Nymph client requires some browser globals that Node doesn't provide, so thi
 
 It also sets up Nymph.init to also call PubSub.init with your configs, so you don't need to set up PubSub yourself.
 
-## Setting up Nymph in Node.js
+## Usage
 
-<div dir="rtl">Quick Setup with NPM</div>
-
-```sh
-npm install --save nymph-client-node
-```
-
-To use, require it as the Nymph object:
+To use, require it instead of `nymph-client`:
 
 ```js
-const Nymph = require('nymph-client-node').Nymph;
+const { Nymph } = require('nymph-client-node');
 ```
 
-Or, if you need cookie support (like if you're using Tilmeld):
+Or, if you need cookie support (like, if you're using [Tilmeld](http://tilmeld.org/)):
 
 ```js
 const NymphNode = require('nymph-client-node');
 NymphNode.enableCookies();
-const Nymph = NymphNode.Nymph;
+const { Nymph } = NymphNode;
 ```
 
 Then provide the options to Nymph.init:
@@ -45,24 +37,7 @@ Then provide the options to Nymph.init:
 ```js
 Nymph.init({
   restURL: 'https://yournymphrestserver/path/to/your/rest.php',
-  pubsubURL: 'wss://yournymphpubsubserver:8080'
-});
-```
-
-Now include your entity classes, such as `Todo`, and you can write queries and subscribe to them:
-
-```js
-Nymph.getEntities({'class': Todo.class}, {'type': '&', 'strict': ['name', 'Foobar']}).subscribe((todos) => {
-  console.log("\nNew Foobar Todo Updates: ", todos);
-});
-
-const myTodo = new Todo();
-myTodo.set({
-  name: "Foobar",
-  done: false
-});
-myTodo.save().then(() => {
-  alert("You've got new todos!");
+  pubsubURL: 'wss://yournymphpubsubserver'
 });
 ```
 

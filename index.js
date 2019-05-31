@@ -13,15 +13,15 @@ const enableCookies = () => {
 };
 
 const NymphClient = require('nymph-client');
-const {Nymph, PubSub} = NymphClient;
+const { Nymph, PubSub } = NymphClient;
 
 // Make a shortcut for PubSub init.
 const _init = Nymph.init;
-Nymph.init = (nymphOptions) => {
+Nymph.init = nymphOptions => {
   _init.call(Nymph, nymphOptions);
   if (nymphOptions.pubsubURL) {
     PubSub.init(nymphOptions);
   }
 };
 
-module.exports = {Nymph, PubSub, enableCookies, ...NymphClient};
+module.exports = { Nymph, PubSub, enableCookies, ...NymphClient };
