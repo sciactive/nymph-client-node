@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://img.shields.io/npm/v/nymph-client-node.svg)](https://www.npmjs.com/package/nymph-client-node) [![Open Issues](https://img.shields.io/github/issues/sciactive/nymph-client-node.svg)](https://github.com/sciactive/nymph-client-node/issues) [![License](https://img.shields.io/github/license/sciactive/nymph-client-node.svg)]()
 
-Nymph is an object data store for JavaScript and PHP.
+Powerful object data storage and querying for collaborative web apps.
 
 ## Installation
 
