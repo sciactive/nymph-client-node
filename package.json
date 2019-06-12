@@ -1,6 +1,6 @@
 {
   "name": "nymph-client-node",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "A client wrapper for using Nymph Client in Node.js.",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/sciactive/nymph-client-node#readme",
   "dependencies": {
-    "nymph-client": "^4.0.0",
+    "nymph-client": "^5.0.1",
     "websocket": "^1.0.28",
     "xmlhttprequest": "^1.8.0",
     "xmlhttprequest-cookie": "^0.9.8"
