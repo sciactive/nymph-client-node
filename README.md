@@ -12,9 +12,7 @@ npm install --save nymph-client-node
 
 This repository is the JavaScript client for Node. There is also a **[browser client](https://github.com/sciactive/nymph-client)**.  For more information, you can see the [main Nymph repository](https://github.com/sciactive/nymph).
 
-The Nymph client requires some browser globals that Node doesn't provide, so this client sets up some globals to provide them.
-
-It also sets up Nymph.init to also call PubSub.init with your configs, so you don't need to set up PubSub yourself.
+This package provides fetch and WebSocket ponyfills to Nymph, handles Tilmeld auth tokens, and sets up `Nymph.init` to also call `PubSub.init` with your configs if you provide a `pubsubURL`.
 
 ## Usage
 
@@ -22,14 +20,6 @@ To use, require it instead of `nymph-client`:
 
 ```js
 const { Nymph } = require('nymph-client-node');
-```
-
-Or, if you need cookie support (like, if you're using [Tilmeld](http://tilmeld.org/)):
-
-```js
-const NymphNode = require('nymph-client-node');
-NymphNode.enableCookies();
-const { Nymph } = NymphNode;
 ```
 
 Then provide the options to Nymph.init:
