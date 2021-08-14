@@ -4,13 +4,17 @@
 
 Powerful object data storage and querying for collaborative web apps.
 
+## Deprecation Notice
+
+The PHP implementation of Nymph/Tilmeld has been deprecated. It will no longer have any new features added. Instead, a new version of Nymph running on Node.js, written entirely in TypeScript will replace the PHP implementation. You can find it over at the [Nymph.js repo](https://github.com/sciactive/nymphjs).
+
 ## Installation
 
 ```sh
 npm install --save nymph-client-node
 ```
 
-This repository is the JavaScript client for Node. There is also a **[browser client](https://github.com/sciactive/nymph-client)**.  For more information, you can see the [main Nymph repository](https://github.com/sciactive/nymph).
+This repository is the JavaScript client for Node. There is also a **[browser client](https://github.com/sciactive/nymph-client)**. For more information, you can see the [main Nymph repository](https://github.com/sciactive/nymph).
 
 This package provides fetch and WebSocket ponyfills to Nymph, handles Tilmeld auth tokens, and sets up `Nymph.init` to also call `PubSub.init` with your configs if you provide a `pubsubURL`.
 
@@ -19,15 +23,15 @@ This package provides fetch and WebSocket ponyfills to Nymph, handles Tilmeld au
 To use, require it instead of `nymph-client`:
 
 ```js
-const { Nymph } = require('nymph-client-node');
+const { Nymph } = require("nymph-client-node");
 ```
 
 Then provide the options to Nymph.init:
 
 ```js
 Nymph.init({
-  restURL: 'https://yournymphrestserver/path/to/your/rest.php',
-  pubsubURL: 'wss://yournymphpubsubserver'
+  restURL: "https://yournymphrestserver/path/to/your/rest.php",
+  pubsubURL: "wss://yournymphpubsubserver",
 });
 ```
 
